@@ -1,0 +1,36 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Create a virtual machine on given ESXi hostname
+    vmware_guest:
+      hostname: 10.41.0.100
+      username: root
+      password: Asi.2019
+      validate_certs: no
+      folder: /ha-datacenter/vm/
+      name: test_vm_0001
+      state: poweredon
+      guest_id: winNetStandard64Guest
+      # This is hostname of particular ESXi server on which user wants VM to be deployed
+      disk:
+      - size_gb: 30
+        type: thin
+        datastore: datastore1
+      hardware:
+        memory_mb: 2024
+        num_cpus: 4
+        scsi: paravirtual
+      networks:
+      - name: VM Network
+        type: dhcp
+        device_type: vmxnet3
+        dns_servers:
+        - 10.41.0.10
+      customization:
+        dns_servers:
+        - 10.41.0.10
+      cdrom:
+        type: iso
+        iso_path: "[datastore1] ISO/Windows_Server_2016_ua.ISO"
+    delegate_to: localhost
+    register: deploy_vm

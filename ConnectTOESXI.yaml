@@ -2,7 +2,7 @@
   connection: local
   vars_prompt:
   - name: "rootpassword"
-    prompt: "Enter your password to esxi"
+    prompt: "Enter your password to esxI"
     private: yes
   tasks:
   - vsphere_guest:

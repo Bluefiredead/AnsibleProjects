@@ -1,2 +1,0 @@
-[esxi]
-esxi2 ansible_host=10.41.0.12 ansible_connection=ssh ansible_user=root ansible_ssh_pass Asi.2019

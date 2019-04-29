@@ -33,6 +33,6 @@
         - 10.41.0.10
       cdrom:
         type: iso
-        iso_path: "[datastore1] ISO/Windows_Server_2016_ua.ISO"
+        iso_path: "[datastore1] ISO/Windows_Server_2016_un.ISO"
     delegate_to: localhost
     register: deploy_vm

@@ -23,7 +23,8 @@
       networks:
       - name: VM Network
         type: dhcp
-        device_type: vmxnet3
+        #device_type: vmxnet3
+        device_type: e1000
         dns_servers:
         - 10.41.0.10
       customization:

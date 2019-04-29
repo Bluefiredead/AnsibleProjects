@@ -1,7 +1,7 @@
 ---
-vars:
-  parameters:
-    name: test1
+- vars:
+    parameters:
+      name: test1
 
 - hosts: localhost
   tasks:

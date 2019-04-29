@@ -15,7 +15,7 @@
       guest_id: winNetStandard64Guest
       # This is hostname of particular ESXi server on which user wants VM to be deployed
       disk:
-      - size_gb: 30
+      - size_gb: "{{ vmdisksize }}"
         type: thin
         datastore: datastore1
       hardware:

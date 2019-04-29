@@ -12,7 +12,7 @@
       password: Asi.2019
       validate_certs: no
       folder: /ha-datacenter/vm/
-      name: {{ test1 }}
+      name: {test1}
       state: poweredon
       guest_id: winNetStandard64Guest
       # This is hostname of particular ESXi server on which user wants VM to be deployed

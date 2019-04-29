@@ -1,9 +1,9 @@
 ---
-- vars:
+- hosts: localhost
+  vars:
     parameters:
       name: test1
 
-- hosts: localhost
   tasks:
   - name: Create a virtual machine on given ESXi hostname
     vmware_guest:

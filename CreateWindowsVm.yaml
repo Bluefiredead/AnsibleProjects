@@ -10,7 +10,6 @@
       folder: /ha-datacenter/vm/
       name: "{{ vmname }}"
       state: poweredon
-      #guest_id: winNetStandard64Guest
       guest_id: windows9Server64Guest
       disk:
       - size_gb: "{{ vmdisksize }}"

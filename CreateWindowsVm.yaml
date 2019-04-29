@@ -1,7 +1,5 @@
 ---
 - hosts: localhost
-  #vars:
-   # vmname: "test1"
   tasks:
   - name: Create a virtual machine on given ESXi hostname
     vmware_guest:
@@ -19,8 +17,8 @@
         type: thin
         datastore: datastore1
       hardware:
-        memory_mb: 2024
-        num_cpus: 4
+        memory_mb: "{{ vmram }}"
+        num_cpus: "{{ vmcpu }}"
         scsi: paravirtual
       networks:
       - name: VM Network

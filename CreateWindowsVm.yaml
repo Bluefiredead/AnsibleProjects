@@ -1,9 +1,7 @@
 ---
-- hosts: localhost
-  vars:
-    parameters:
-      vmname: test1
+vmname: test1
 
+- hosts: localhost
   tasks:
   - name: Create a virtual machine on given ESXi hostname
     vmware_guest:
@@ -12,7 +10,7 @@
       password: Asi.2019
       validate_certs: no
       folder: /ha-datacenter/vm/
-      name: parameters.vmname
+      name: "{{ vmname }}"
       state: poweredon
       guest_id: winNetStandard64Guest
       # This is hostname of particular ESXi server on which user wants VM to be deployed

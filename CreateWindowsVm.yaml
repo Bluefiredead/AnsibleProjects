@@ -1,7 +1,6 @@
 ---
-vmname: test1
-
 - hosts: localhost
+  vmname: test1
   tasks:
   - name: Create a virtual machine on given ESXi hostname
     vmware_guest:
